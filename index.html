@@ -3,10 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vision Web</title>
+    <title>Agentes inteligentes para WhatsApp - Vision</title>
+    <meta name="description" content="Transforma tu WhatsApp en tu mejor vendedor con agentes inteligentes. Automatiza la atención al cliente, convierte más ventas y gestiona consultas 24/7. ¡Prueba nuestros asistentes para WhatsApp y deja de perder clientes!">
+    <meta name="keywords" content="agente inteligente, whatsapp, automatización, chatbot, servicio al cliente, ventas, 24/7, vision, soporte técnico, setter digital">
+    <meta name="author" content="Vision">
+    <link rel="canonical" href="https://visionweb.co/">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Vision",
+          "url": "https://visionweb.co/",
+          "logo": "https://visionweb.co/images/logo-vision.png"
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Agentes Inteligentes para WhatsApp",
+          "provider": {
+            "@type": "Organization",
+            "name": "Vision"
+          },
+          "description": "Transforma tu WhatsApp en tu mejor vendedor con agentes inteligentes. Automatiza la atención al cliente, convierte más ventas y gestiona consultas 24/7.",
+          "offers": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Agente de Servicio al Cliente"
+              },
+              "price": "449000",
+              "priceCurrency": "COP"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Agente Setter Digital y Soporte Técnico"
+              },
+              "price": "669000",
+              "priceCurrency": "COP"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://visionweb.co/">
+    <meta property="og:title" content="Agentes inteligentes para WhatsApp - Vision">
+    <meta property="og:description" content="Transforma tu WhatsApp en tu mejor vendedor con agentes inteligentes. Automatiza la atención al cliente, convierte más ventas y gestiona consultas 24/7.">
+    <meta property="og:image" content="https://visionweb.co/images/asistente-inteligente-en-whatsapp.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://visionweb.co/">
+    <meta property="twitter:title" content="Agentes inteligentes para WhatsApp - Vision">
+    <meta property="twitter:description" content="Transforma tu WhatsApp en tu mejor vendedor con agentes inteligentes. Automatiza la atención al cliente, convierte más ventas y gestiona consultas 24/7.">
+    <meta property="twitter:image" content="https://visionweb.co/images/asistente-inteligente-en-whatsapp.jpg">
+    <link rel="icon" type="image/png" href="images/vision-agentes-inteligentes-para-whatsapp-isotipo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
@@ -15,7 +78,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="images/logo-vision-oscuro-1920x469.png" alt="Vision Logo">
+                <img src="images/logo-vision.png" alt="Vision Logo">
             </div>
             <ul class="nav-links">
                 <li><a href="#problema">El Problema</a></li>
@@ -33,82 +96,165 @@
 
     <main>
         <section id="hero" class="hero">
-            <video autoplay muted loop playsinline class="hero-video-bg">
-                <source src="images/vision-bg-2.mp4" type="video/mp4">
-            </video>
             <div class="hero-content">
-                <h1>¿Tu WhatsApp es un caos de mensajes?<br>Conviértelo en tu mejor vendedor 24/7.</h1>
-                <p>Deja de perder clientes y ventas por un WhatsApp desorganizado. Implementa un Asistente Inteligente entrenado para atender, calificar y vender por ti, incluso mientras duermes.</p>
-                <a href="#" class="cta-button">Transforma mi WhatsApp Ahora</a>
+                <div class="hero-text">
+                    <h1>¿Caos en <br>WhatsApp?</h1>
+                    <h2>Conviértelo en tu mejor vendedor 24/7.</h2>
+                    <div class="remark">No pierdas Clientes por <span>responder tarde.</span></div>
+                    <div class="remark2">Un <span class="bold-white">Agente Inteligente</span> <span class="highlight-blue">vende por ti</span></div>
+                    <div class="remark3">incluso mientras duermes.</div>    
+                    <a href="https://wa.me/+573003420285?text=Hola,%20quiero%20saber%20m%C3%A1s%20de%20los%20asistentes%20inteligentes%20para%20whatsapp" target="_blank" class="mt-1 cta-button">Pruebalo en WhatsApp</a>
+                </div>
+                <div class="hero-image-container">
+                    <video autoplay muted loop playsinline>
+                        <source src="images/bg-asistentes.vision.mp4" type="video/mp4">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
+                </div>
             </div>
         </section>
 
         <section id="problema" class="features">
-            <h2>¿Te suena familiar alguno de estos escenarios?</h2>
-            <div class="feature-grid problem-list">
-                <div class="feature-item"><span class="material-symbols-outlined feature-icon">hourglass_empty</span><h3>Lentitud que cuesta ventas</h3><p>Tus clientes preguntan, pero con tantos mensajes, tardas demasiado en responder y se van con la competencia.</p></div>
-                <div class="feature-item"><span class="material-symbols-outlined feature-icon">sync_problem</span><h3>Desorden que frustra</h3><p>La comunicación de tu equipo es un caos, provocando errores, pérdida de clientes y ventas.</p></div>
-                <div class="feature-item"><span class="material-symbols-outlined feature-icon">phone_missed</span><h3>Oportunidades perdidas</h3><p>Cierras a las 6 p.m., pero tus clientes siguen escribiendo. No hay nadie para atenderlos y esas ventas se enfrían.</p></div>
-                <div class="feature-item"><span class="material-symbols-outlined feature-icon">rule</span><h3>Seguimiento imposible</h3><p>El alto volumen de chats hace que sea casi imposible dar seguimiento adecuado a cada consulta o proceso de venta.</p></div>
+            <div class="container">
+                <h2 style="margin-top:0;">Problemas comunes</h2>
+                <div class="mb-1">¿Te suena familiar alguno de estos escenarios en la gestión de tus cleintes por WhatsApp?</div>
+                <div class="problem-layout">
+                    <div class="problem-list">
+                        <div class="feature-grid">
+                    <div class="feature-item"><span class="material-symbols-outlined feature-icon">hourglass_empty</span><div><h3>Lentitud que cuesta ventas</h3><p>Tus clientes preguntan, pero con tantos mensajes, tardas demasiado en responder y se van con la competencia.</p></div></div>
+                    <div class="feature-item"><span class="material-symbols-outlined feature-icon">sync_problem</span><div><h3>Desorden que frustra</h3><p>La comunicación de tu equipo es un caos, provocando errores, pérdida de clientes y ventas.</p></div></div>
+                    <div class="feature-item"><span class="material-symbols-outlined feature-icon">phone_missed</span><div><h3>Oportunidades perdidas</h3><p>Cierras a las 6 p.m., pero tus clientes siguen escribiendo. No hay nadie para atenderlos y esas ventas se enfrían.</p></div></div>
+                            <div class="feature-item"><span class="material-symbols-outlined feature-icon">rule</span><div><h3>Seguimiento imposible</h3><p>El alto volumen de chats hace que sea casi imposible dar seguimiento adecuado a cada consulta o proceso de venta.</p></div></div>
+                        </div>
+                    </div>
+                    <div class="problem-image">
+                        <img src="images/asistente-inteligente-en-whatsapp.jpg" alt="Agente Inteligente en WhatsApp">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="solucion" class="features alternate-bg">
-            <h2>La solución existe: Un Asistente Inteligente que trabaja para ti.</h2>
-            <p class="section-intro">Imagina tener un miembro en tu equipo que nunca duerme, responde al instante con la personalidad de tu marca, y ejecuta tareas clave para liberar a tu equipo humano. Nuestros Asistentes Inteligentes se integran directamente a tu WhatsApp Business para transformar la gestión de clientes.</p>
-            <div class="feature-grid">
-                <div class="feature-item"><span class="material-symbols-outlined feature-icon">smart_toy</span><h3>Asistente Inteligente 24/7</h3><p>Responde al instante, a cualquier hora, con un asistente que nunca duerme y siempre sabe qué decir.</p></div>
-                <div class="feature-item"><span class="material-symbols-outlined feature-icon">bolt</span><h3>Respuestas Inmediatas y Precisas</h3><p>Elimina las esperas. Tu asistente utiliza tu propia información para dar respuestas correctas al instante.</p></div>
-                <div class="feature-item"><span class="material-symbols-outlined feature-icon">database</span><h3>Base de Conocimiento Centralizada</h3><p>Toda la información de tus productos, servicios y procesos en un solo lugar, accesible para tu asistente.</p></div>
-                <div class="feature-item"><span class="material-symbols-outlined feature-icon">savings</span><h3>Bajo Costo, Alta Rentabilidad</h3><p>Reduce costos operativos y aumenta tus conversiones con una inversión mínima y sin contratos a largo plazo.</p></div>
+        <section id="solucion">
+            <div class="solucion-intro-wrapper features">
+                <div class="container">
+                    <img src="images/vision-isotipo-fondo-transparente.png" alt="Vision Isotipo" style="width: 80px; display: block; margin: 0 auto 20px auto;">
+                    <h2 class="solucion-main-title">Gana más clientes</h2>
+                    <h3 class="solucion-subtitle">Con un Agente Inteligente que trabaja para ti.</h3>
+                    <p class="section-intro" style="margin-top: 20px;">Un miembro en tu equipo que nunca duerme, responde al instante con la personalidad de tu marca, y ejecuta tareas clave para liberar a tu equipo humano. Nuestros Agentes Inteligentes se integran directamente a tu WhatsApp Business para transformar la gestión de clientes.</p>
+                    <a href="https://wa.me/+573003420285?text=Hola,%20quiero%20saber%20m%C3%A1s%20de%20los%20asistentes%20inteligentes%20para%20whatsapp" target="_blank" class="cta-button" style="margin-top: 30px;">Pruebalo en WhatsApp</a>
+                </div>
+            </div>
+            <div class="solucion-features-wrapper features">
+                <div class="container">
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <span class="material-symbols-outlined feature-icon">smart_toy</span>
+                                <h3>Agente Inteligente 24/7</h3>
+                            </div>
+                            <p>Responde al instante, a cualquier hora, con un agente que nunca duerme y siempre sabe qué decir.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <span class="material-symbols-outlined feature-icon">bolt</span>
+                                <h3>Respuestas Inmediatas y Precisas</h3>
+                            </div>
+                            <p>Elimina las esperas. Tu agente utiliza tu propia información para dar respuestas correctas al instante.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <span class="material-symbols-outlined feature-icon">database</span>
+                                <h3>Base de Conocimiento Centralizada</h3>
+                            </div>
+                            <p>Toda la información de tus productos, servicios y procesos en un solo lugar, accesible para tu agente.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <span class="material-symbols-outlined feature-icon">savings</span>
+                                <h3>Bajo Costo, Alta Rentabilidad</h3>
+                            </div>
+                            <p>Reduce costos operativos y aumenta tus conversiones con una inversión mínima y sin contratos a largo plazo.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="plan" class="features">
-            <h2>Implementa tu Asistente en 2 Sencillos Pasos</h2>
-            <div class="plan-steps">
-                <div class="step">
-                    <h3>Paso 1: Personaliza tu Asistente</h3>
-                    <p>Te guiamos en el entrenamiento de tu asistente con toda la información de tu negocio. Aprenderá sobre tus productos, servicios y procesos para responder con total precisión y un lenguaje natural.</p>
+            <div class="container">
+                <h2>2 Sencillos Pasos</h2>
+                <h3>Para que tengas tu Agente Inteligente en WhatsApp</h3>
+                <div class="plan-steps">
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">1</div>
+                            <h3>Personaliza tu Agente</h3>
+                        </div>
+                        <ul>
+                            <li>Te guiamos en el entrenamiento con la información de tu negocio.</li>
+                            <li>Aprende sobre tus productos, servicios y procesos.</li>
+                            <li>Responde con precisión y un lenguaje natural.</li>
+                        </ul>
+                    </div>
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">2</div>
+                            <h3>Intégralo en WhatsApp</h3>
+                        </div>
+                        <ul>
+                            <li>Conectamos el agente directamente a tu línea de WhatsApp.</li>
+                            <li>Tus clientes chatean de forma fluida y directa.</li>
+                            <li>Sin necesidad de descargar aplicaciones adicionales.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="step">
-                    <h3>Paso 2: Intégralo con tu WhatsApp Business</h3>
-                    <p>Conectamos el asistente a tu línea de WhatsApp. Tus clientes chatearán con él de forma fluida y directa, sin tener que descargar ninguna aplicación adicional.</p>
-                </div>
+            <a href="https://wa.me/+573003420285?text=Hola,%20quiero%20saber%20m%C3%A1s%20de%20los%20asistentes%20inteligentes%20para%20whatsapp" target="_blank" class="cta-button">Pruebalo en WhatsApp</a>
             </div>
-            <a href="#" class="cta-button">Quiero mi Plan de Implementación</a>
         </section>
 
         <section id="casos-de-uso" class="features">
-            <h2>Un Asistente entrenado para cada área de tu empresa</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <span class="material-symbols-outlined feature-icon">support_agent</span>
-                    <h3>Asistente de Servicio al Cliente</h3>
-                    <p>Ideal para empresas que buscan una atención inmediata y conectada, resolviendo dudas 24/7.</p>
+            <div class="container">
+                <h2>Un Agente entrenado para cada área de tu empresa</h2>
+                <div class="pricing-card">
+                    <div class="card-details">
+                        <h3>Agente de Servicio al Cliente</h3>
+                        <p>Ideal para empresas que buscan una atención inmediata y conectada, resolviendo dudas 24/7.</p>
+                    </div>
+                    <div class="card-pricing">
+                        <div class="price">$449.000</div>
+                        <a href="https://wa.me/+573003420285?text=Quiero%20el%20asistente%20de%20servicio%20al%20cliente" target="_blank" class="cta-button-outline">Lo Quiero</a>
+                    </div>
                 </div>
-                <div class="feature-item">
-                    <span class="material-symbols-outlined feature-icon">event_available</span>
-                    <h3>Asistente Setter Digital (Comercial)</h3>
-                    <p>Especializado en convertir conversaciones en citas y oportunidades de venta, calificando leads.</p>
-                </div>
-                <div class="feature-item">
-                    <span class="material-symbols-outlined feature-icon">build</span>
-                    <h3>Asistente de Diagnóstico y Soporte (Técnico)</h3>
-                    <p>Capaz de guiar a los usuarios en la resolución de problemas técnicos comunes de forma automatizada.</p>
-                </div>
-                <div class="feature-item">
-                    <span class="material-symbols-outlined feature-icon">assignment_turned_in</span>
-                    <h3>Asistente de Gestión de PQRS</h3>
-                    <p>Gestiona peticiones, quejas y reclamos de forma automática, generando números de caso para seguimiento.</p>
+
+                <div class="multi-agent-card pricing-card">
+                    <div class="card-details">
+                        <div class="agent-item">
+                            <h3>Agente Setter Digital</h3>
+                            <p>Especializado en convertir conversaciones en citas y oportunidades de venta, calificando leads.</p>
+                        </div>
+                        <div class="agent-item">
+                            <h3>Agente de Soporte Técnico</h3>
+                            <p>Guía a los usuarios en la resolución de problemas técnicos comunes de forma automatizada.</p>
+                        </div>
+                        <div class="agent-item">
+                            <h3>Agente de Gestión de PQRS</h3>
+                            <p>Gestiona peticiones, quejas y reclamos de forma automática, generando números de caso para seguimiento.</p>
+                        </div>
+                    </div>
+                    <div class="card-pricing">
+                        <div class="price">$669.000</div>
+                        <a href="https://wa.me/+573003420285?text=Quiero%20el%20asistente%20de%20$669.000" target="_blank" class="cta-button-outline">Lo Quiero</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="cta-final" class="cta-secondary">
-            <h2>¿Estás listo para que tu WhatsApp trabaje para ti?</h2>
-            <p>Deja de competir por atención y empieza a ganar con un servicio que te diferencia. Automatiza, convierte y fideliza desde la plataforma de mensajería más usada del mundo.</p>
-            <a href="#" class="cta-button">Sí, quiero potenciar mi WhatsApp</a>
+            <div class="container">
+                <h2>¿Estás listo para que tu WhatsApp trabaje para ti?</h2>
+                <p>Deja de competir por atención y empieza a ganar con un servicio que te diferencia. Automatiza, convierte y fideliza desde la plataforma de mensajería más usada del mundo.</p>
+                <a href="https://wa.me/+573003420285?text=Hola,%20quiero%20saber%20m%C3%A1s%20de%20los%20asistentes%20inteligentes%20para%20whatsapp" target="_blank" class="cta-button">Pruebalo en WhatsApp</a>
+            </div>
         </section>
     </main>
 
