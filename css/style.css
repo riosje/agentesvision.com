@@ -795,8 +795,9 @@ footer {
         text-align: left;
         width: 100%;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
     }
 
     .card-pricing .price {
