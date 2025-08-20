@@ -780,4 +780,36 @@ footer {
         display: inline;
     }
 
+    .pricing-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 30px 25px;
+    }
+
+    .card-details h3 {
+        font-size: 1.8rem;
+    }
+
+    .card-pricing {
+        text-align: left;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card-pricing .price {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+    }
+
+    .multi-agent-card.pricing-card {
+        align-items: stretch;
+    }
+
+    .multi-agent-card .card-pricing {
+        margin-top: 20px;
+    }
+
 }
