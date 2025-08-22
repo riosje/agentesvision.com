@@ -3,9 +3,9 @@
     --dark-blue: #0E265B;
     --light-blue: #66C5DD;
     --purple: #564DF8;
-    --pink: #BD6EF5;
+    --pink: #d552e9;
     --white: #ffffff;
-    --text-dark: #203053;
+    --text-dark: #0E265B;
     --text-light: #ffffff;
 }
 
@@ -140,21 +140,36 @@ nav {
     text-align: left;
 }
 
+/* --- Video Hero Container --- */
 .hero-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* Desktop styles */
+    grid-column: 2 / 3;
+    margin: 0 auto;
+    max-width: 400px;
+    max-height: 70vh;
+}
+
+.hero-image-container::before {
+    content: '';
+    display: block;
+    padding-top: 177.77%; /* 9:16 Aspect Ratio */
 }
 
 .hero-image-container video {
-    width: 80%;
-    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 20px;
     color: var(--text-light);
     line-height: 5rem;
@@ -168,14 +183,23 @@ nav {
 }
 
 .cta-button {
-    background: linear-gradient(-36deg, var(--dark-blue), var(--light-blue));
-    color: var(--text-light);
+    /*background: linear-gradient(215deg, var(--light-blue), var(--dark-blue), var(--light-blue));*/
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
     padding: 15px 30px;
     border-radius: 50px;
     font-size: 16px;
     transition: transform 0.3s ease;
     display: inline-block;
     border: none;
+    margin-top: 20px;
+}
+
+.cta-button-secondary {
+    
+    background-color: var(--dark-blue);
+    color: var(--text-light);
+    
 }
 
 .cta-button:hover {
@@ -186,6 +210,10 @@ nav {
 .features {
     padding: 80px 0;
     text-align: left;
+}
+
+.features.pt-1 {
+    padding-top: 5px;
 }
 
 .features.alternate-bg {
@@ -201,7 +229,7 @@ nav {
 }
 
 .solucion-features-wrapper {
-    background: linear-gradient(135deg, var(--dark-blue), var(--purple));
+    background-color: #fff;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed; /* Parallax effect */
@@ -247,10 +275,13 @@ nav {
     margin-bottom: 15px;
 }
 
-.solucion-features-wrapper .feature-item .feature-icon {
-    font-size: 2rem;
-    color: var(--purple);
+#solucion .feature-item .feature-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-right: 15px; /* Add some space between icon and title */
 }
+
 
 .solucion-features-wrapper .feature-item h3 {
     color: var(--text-dark);
@@ -287,7 +318,6 @@ nav {
 #plan .container > h3 {
     font-size: 1rem;
     text-transform: uppercase;
-    color: var(--purple);
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 50px;
@@ -316,7 +346,7 @@ nav {
 }
 
 .step-number {
-    color: var(--purple);
+    
     font-size: 2.5rem;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
@@ -332,7 +362,6 @@ nav {
 }
 
 .step h3 {
-    color: var(--purple);
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -359,7 +388,7 @@ nav {
 .step ul li::before {
     content: 'check_circle';
     font-family: 'Material Symbols Outlined';
-    color: var(--purple);
+    
     font-size: 1.4rem;
     margin-right: 12px;
     font-variation-settings: 'FILL' 1;
@@ -488,7 +517,7 @@ nav {
 
 
 .features h2 {
-    font-size: 3.5em;
+    font-size: 4em;
     margin-bottom: 0px;
 }
 
@@ -550,8 +579,9 @@ nav {
 }
 
 #problema .feature-item .feature-icon {
-    font-size: 2.5rem;
-    color: var(--purple);
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 
 #problema .feature-item h3 {
@@ -593,7 +623,7 @@ nav {
 
 .feature-item h3 {
     font-size: 24px;
-    color: var(--purple);
+    color: var(--text-dark);
     margin-bottom: 15px;
 }
 
@@ -615,7 +645,7 @@ nav {
 }
 
 .step h3 {
-    color: var(--purple);
+    
     font-size: 24px;
 }
 
@@ -735,7 +765,6 @@ footer {
 
     .hero h1 {
         font-size: 3rem;
-        color: #00EBFA;
         margin-top: 10px;
         line-height: 3.5rem;
         overflow-wrap: break-word;
@@ -746,8 +775,14 @@ footer {
     }
 
     .features h2 {
-        font-size: 28px;
+        font-size: 3em;
+        line-height: 1.2em;
     }
+    .hero
+    {
+        background-image: radial-gradient(circle at 50% 30%, rgb(136 86 171 / 60%) 0%, #0e265b 40%);
+    }
+    
 
     .hero-content {
         grid-template-columns: 1fr;
@@ -760,13 +795,13 @@ footer {
     }
 
     .hero-image-container {
+        grid-column: 1 / -1; /* Take full width of grid */
         grid-row: 1;
+        max-width: none;
+        max-height: none;
     }
 
-    .hero-image-container video {
-        width: 100%;
-    }
-
+    
     .problem-layout {
         grid-template-columns: 1fr;
     }
