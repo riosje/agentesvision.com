@@ -778,23 +778,25 @@ footer {
         font-size: 3em;
         line-height: 1.2em;
     }
-    .hero
-    {
+            #hero {
+        padding: 20px 20px;
         background-image: radial-gradient(circle at 50% 30%, rgb(136 86 171 / 60%) 0%, #0e265b 40%);
+        min-height: 100vh;
+        height: 100%;
     }
     
 
     .hero-content {
         grid-template-columns: 1fr;
         gap: 20px;
-        padding: 40px 0;
+        padding: 0;
     }
 
-    .hero-text {
+        .hero-text {
         grid-row: 2;
     }
 
-    .hero-image-container {
+            .hero-image-container {
         grid-column: 1 / -1; /* Take full width of grid */
         grid-row: 1;
         max-width: none;
