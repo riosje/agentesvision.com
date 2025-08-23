@@ -158,14 +158,14 @@ nav {
     padding-top: 177.77%; /* 9:16 Aspect Ratio */
 }
 
-.hero-image-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 18px;
+.hero-image-container iframe {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 18px;
 }
 
 .hero h1 {
@@ -182,28 +182,44 @@ nav {
     color: var(--text-light);
 }
 
+/* --- CTA Button Styles --- */
 .cta-button {
-    /*background: linear-gradient(215deg, var(--light-blue), var(--dark-blue), var(--light-blue));*/
-    background-color: var(--light-blue);
-    color: var(--dark-blue);
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-size: 16px;
-    transition: transform 0.3s ease;
     display: inline-block;
+    background: linear-gradient(45deg, #0D122B, var(--purple));
+    color: var(--white);
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
-    margin-top: 20px;
-}
-
-.cta-button-secondary {
-    
-    background-color: var(--dark-blue);
-    color: var(--text-light);
-    
+    text-align: center;
 }
 
 .cta-button:hover {
-    transform: scale(1.05);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+.cta-button-secondary {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--dark-blue);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 2px solid var(--dark-blue);
+}
+
+.cta-button-secondary:hover {
+    background-color: var(--light-blue);
+    color: var(--white);
+    transform: translateY(-2px);
+    border-color: var(--light-blue);
 }
 
 /* --- Feature & Content Sections --- */
@@ -289,6 +305,7 @@ nav {
     font-weight: 600;
     text-transform: uppercase;
     margin: 0;
+    text-align: left;
 }
 
 .solucion-features-wrapper .feature-item p {
@@ -395,22 +412,6 @@ nav {
     transform: translateY(-2px);
 }
 
-#plan .cta-button {
-    background: linear-gradient(45deg, #0D122B, var(--purple));
-    padding: 18px 40px;
-    border-radius: 50px;
-    font-weight: 600;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    display: inline-block;
-    text-align: center;
-    color: var(--white);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#plan .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
-}
 
 /* --- Casos de Uso Section --- */
 #casos-de-uso {
@@ -460,27 +461,6 @@ nav {
     margin-bottom: 15px;
 }
 
-.cta-button-outline {
-    display: inline-block;
-    background-color: var(--text-dark);
-    border: 2px solid var(--text-dark);
-    color: var(--white);
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
-
-.cta-button-outline:hover {
-    background-color: var(--purple);
-    border-color: var(--purple);
-    color: var(--white);
-}
 
 .multi-agent-card.pricing-card {
     background-color: var(--white);
@@ -537,9 +517,23 @@ nav {
 
 .section-intro {
     max-width: 800px;
-    margin: -20px auto 40px auto;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 18px;
     color: #555;
+}
+
+.solucion-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.solucion-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
 }
 
 .features.alternate-bg .section-intro {
@@ -551,6 +545,10 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 40px;
+}
+
+.solucion-layout .feature-grid {
+    grid-template-columns: 1fr;
 }
 
 .problem-layout {
@@ -805,6 +803,10 @@ footer {
 
     
     .problem-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .solucion-layout {
         grid-template-columns: 1fr;
     }
 
