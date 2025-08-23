@@ -570,7 +570,7 @@ nav {
     gap: 0 20px;
     text-align: left;
     align-items: flex-start; /* Align items to the center of the row */
-    padding: 15px;
+    padding: 10px 0;
     box-shadow: none;
     border: none;
     background: none;
@@ -725,6 +725,10 @@ footer {
 
 /* --- Responsive (Mobile) Styles --- */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
     .solucion-features-wrapper .feature-grid {
         grid-template-columns: 1fr;
     }
@@ -808,6 +812,11 @@ footer {
 
     .solucion-layout {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .solucion-image {
+        margin-top: 20px;
     }
 
     .problem-image {
