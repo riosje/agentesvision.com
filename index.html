@@ -353,6 +353,84 @@
         --chat--toggle--color: var(--chat--color-white);
         --chat--toggle--size: 64px;
     }
+
+    /* --- CSS PERSONALIZADO PARA IMÁGENES --- */
+    .chat-header .chat-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .chat-header .chat-heading h1 {
+        color: var(--light-blue);
+        margin-right: auto;
+    }
+
+    .chat-header .chat-heading::after {
+        content: "";
+        min-width: 35px;
+        width: 35px;
+        height: 35px;
+        background-image: url("https://agentesvision.com/images/agentes-vision-isologo.png");
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        margin-left: 10px;
+    }
+
+    /* --- ESTILOS REVISADOS PARA EL TOGGLE --- */
+    .chat-window-toggle {
+        /* Asegurar dimensiones y forma */
+        width: var(--chat--toggle--size, 64px) !important;
+        height: var(--chat--toggle--size, 64px) !important;
+        border-radius: 50% !important;
+
+        /* Aplicar la imagen de fondo */
+        background-image: url("https://famysalud.com.co/wp-content/uploads/2025/04/Avatar-fanny-famysalud.png") !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+
+        /* Eliminar cualquier color de fondo por defecto que pueda interferir */
+        background-color: transparent !important;
+
+        /* Asegurar que no haya bordes o outlines no deseados */
+        border: 5px solid var(--chat--color-primary); /* Borde que solicitaste */
+        outline: none !important;
+
+        /* Para asegurar que el contenido interno (SVG) no cause problemas de layout */
+        overflow: hidden;
+        text-indent: -9999px; /* Si hubiera texto accidental */
+    }
+
+    .chat-window-toggle svg {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        position: absolute !important;
+    }
+    /* --- FIN ESTILOS REVISADOS PARA EL TOGGLE --- */
+
+    .chat-message-from-bot {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .chat-message-from-bot::before {
+        content: "";
+        min-width: 30px;
+        width: 30px;
+        height: 30px;
+        background-image: url("https://famysalud.com.co/wp-content/uploads/2025/04/Avatar-fanny-famysalud.png");
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        margin-right: 8px;
+        margin-top: 5px;
+    }
 </style>
 <script type="module">
     import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
