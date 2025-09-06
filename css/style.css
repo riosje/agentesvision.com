@@ -463,36 +463,85 @@ nav {
 
 
 .multi-agent-card.pricing-card {
-    background-color: var(--white);
-    align-items: flex-start;
+    display: block;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
     padding: 40px 50px;
 }
 
-.multi-agent-card .card-details {
-    max-width: 420px;
+.multi-agent-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;    
+    padding-bottom: 30px;
 }
 
-.agent-item {
-    padding: 20px 0;
+.multi-agent-card .header-title h3 {
+    font-size: 1.8rem;
+    margin: 0 0 5px 0;
+    text-transform: none;
+    color: var(--text-dark);
 }
 
-.agent-item:not(:last-child) {
-    border-bottom: 1px solid #e0e0e0;
+.multi-agent-card .header-title p {
+    margin: 0;
+    max-width: 100%;
+    color: var(--text-secondary);
 }
 
-.multi-agent-card .card-details .agent-item:first-child {
-    padding-top: 0;
+.agents-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    width: 100%;
 }
 
-.multi-agent-card .card-details .agent-item:last-child {
-    padding-bottom: 0;
+.multi-agent-card .agent-item {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
 }
 
-.agent-item p {
+.multi-agent-card .agent-item h4 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+
+.multi-agent-card .agent-item p {
+    margin: 0 0 20px 0;
+    flex-grow: 1; 
     font-size: 0.95rem;
     color: var(--text-secondary);
-    margin: 0;
     line-height: 1.5;
+}
+
+.cta-button-small {
+    display: inline-block;
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    border: 1px solid var(--dark-blue);
+    text-align: center;
+}
+
+.cta-button-small:hover {
+    background-color: var(--purple);
+    border-color: var(--purple);
 }
 
 
@@ -714,6 +763,16 @@ nav {
     margin: 0 auto 30px auto;
 }
 
+.price small {
+    display:block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color:#9a9a9a;
+    font-style:italic;
+    font-weight:light;
+}
+    
+
 footer {
     text-align: center;
     padding: 20px;
@@ -853,12 +912,19 @@ footer {
         margin-bottom: 0;
     }
 
-    .multi-agent-card.pricing-card {
-        align-items: stretch;
+    .multi-agent-card .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
 
     .multi-agent-card .card-pricing {
-        margin-top: 20px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .agents-grid {
+        grid-template-columns: 1fr;
     }
 
 }
