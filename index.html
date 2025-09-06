@@ -295,5 +295,43 @@
     
         mt('send', 'pageview');
     </script>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<div id="n8n-chat"></div>
+<script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    createChat({
+    webhookUrl: 'https://n8n.automation.coolify.riosdevops.com/webhook/e8fc890a-fc07-40b5-9669-f5256645cf37/chat',
+    webhookConfig: {
+        method: 'POST',
+        headers: {}
+    },
+    target: '#n8n-chat',
+    mode: 'window',
+    chatInputKey: 'chatInput',
+    chatSessionKey: 'sessionId',
+    loadPreviousSession: true,
+    metadata: {},
+    showWelcomeScreen: false,
+    defaultLanguage: 'en',
+    initialMessages: [
+        'Hola! 👋',
+        'Soy Vision, asistente inteligente para whatsapp 24/7'
+    ],
+    i18n: {
+        en: {
+            title: 'Hola! 👋',
+            subtitle: "Conversa conmigo y aprende como mejorar tus ventas",
+            footer: '',
+            getStarted: 'Nueva conversación',
+            inputPlaceholder: '¿Tienes preguntas?',
+        },
+    },
+    enableStreaming: true,
+});
+    
+</script>
+
+
 </body>
 </html>
