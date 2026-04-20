@@ -109,15 +109,25 @@ nav {
 /* --- Hero Section --- */
 .hero {
     position: relative;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 50px;
     color: var(--text-light);
-    background-color: var(--dark-blue);
-    background-image: radial-gradient(circle at 60% 50%, rgb(136 86 171 / 60%) 0%, #0e265b 40%);
+    background: var(--dark-blue) url('../images/agentes-vision-bg-v4.jpg') no-repeat left top;
+    background-size: cover;
     overflow: hidden;
+    min-height: 100vh;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
 }
 
 .hero-content {
@@ -613,6 +623,11 @@ nav {
     gap: 20px;
 }
 
+#problema
+{
+    background-color: var(--white);
+}
+
 #problema .feature-item {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -841,7 +856,6 @@ footer {
     }
             #hero {
         padding: 20px 20px;
-        background-image: radial-gradient(circle at 50% 30%, rgb(136 86 171 / 60%) 0%, #0e265b 40%);
         min-height: 100vh;
         height: 100%;
     }
