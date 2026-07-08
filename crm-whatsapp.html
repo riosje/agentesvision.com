@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VISION CRM - Conversacional Autónomo</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./images/vision-isotipo-fondo-transparente.png" />
 
@@ -84,7 +84,7 @@
     </script>
 
     <!-- Typography & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
 
     <style>
@@ -116,6 +116,41 @@
         @media (hover: hover) {
             .group:hover .reveal-card:not(:hover) { opacity: 0.4; }
         }
+
+        /* Mautic form CSS override */
+        .mauticform-label { display: none !important; }
+        .mauticform-error { color: #ef4444; font-size: 0.75rem; margin-top: 0.25rem; }
+        .mauticform-message { color: #22c55e; font-size: 0.875rem; margin-top: 0.5rem; }
+        .mauticform-button {
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            background-color: #000000;
+            color: #ffffff;
+            border-radius: 9999px;
+            padding: 1rem 2.5rem;
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: none;
+            transition: opacity 0.3s;
+            width: 100%;
+        }
+        .mauticform-button:hover { opacity: 0.9; }
+        .mauticform-input {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 1px solid rgba(134, 134, 139, 0.3);
+            border-radius: 1rem;
+            font-size: 1rem;
+            background: white;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .mauticform-input:focus {
+            border-color: #00E5FF;
+        }
     </style>
 </head>
 
@@ -133,10 +168,10 @@
                 <a class="text-zinc-500 dark:text-zinc-400 font-medium hover:text-zinc-950 dark:hover:text-zinc-50 transition-all duration-300 scale-105 active:scale-95 transition-transform"
                     href="index.html">Home</a>
                 <a class="text-zinc-500 dark:text-zinc-400 font-medium hover:text-zinc-950 dark:hover:text-zinc-50 transition-all duration-300 scale-105 active:scale-95 transition-transform"
-                    href="crm-whatsapp.html">CRM WhatsApp</a>
+                    href="crm-whatsapp-v2.html">CRM WhatsApp</a>
             </div>
             <div class="hidden md:block">
-                <a href="https://wa.me/573004040285?text=Hola%2C%20necesito%20una%20soluci%C3%B3n%20de%20Inteligencia%20Artificial%20para%20mi%20negocio"
+                <a href="https://wa.me/573004040285?text=Hola%2C%20quiero%20saber%20c%C3%B3mo%20VISION%20puede%20ayudar%20a%20mi%20negocio"
                     target="_blank" rel="noopener noreferrer"
                     class="inline-block text-center bg-primary text-on-primary-fixed rounded-full px-6 py-3 font-bold text-sm tracking-widest uppercase hover:opacity-90 transition-opacity">
                     Agendar Consultoría
@@ -146,9 +181,9 @@
     </nav>
 
     <main class="pt-28">
-        <!-- Hero Section -->
+        <!-- ==================== HERO ==================== -->
         <section
-            class="relative min-h-[60vh] flex flex-col justify-center items-center text-center px-6 py-20 w-full mx-auto overflow-hidden">
+            class="relative min-h-[70vh] flex flex-col justify-center items-center text-center px-6 py-28 w-full mx-auto overflow-hidden">
             <div class="absolute inset-0 z-0 pointer-events-none hero-grid-bg"></div>
             <div
                 class="absolute top-[-10%] right-[-10%] lg:right-1/4 w-[800px] h-[800px] bg-accent-cyan rounded-full blur-[120px] animate-pulse-slow pointer-events-none z-0 mix-blend-multiply dark:mix-blend-screen">
@@ -159,10 +194,13 @@
                     ⚡ CRM INTELIGENTE PARA WHATSAPP
                 </h2>
                 <h1
-                    class="text-[3.55rem] md:text-8xl font-black text-[#0A0A0A] dark:text-white tracking-tighter mb-8 leading-[0.9]">
+                    class="text-[3.55rem] md:text-8xl font-black text-[#0A0A0A] dark:text-white tracking-tighter mb-4 leading-[0.9]">
                     Venda en el<br>segundo cero.
                 </h1>
-                <div class="flex flex-col items-center max-w-2xl text-center mb-12">
+                <p class="text-lg md:text-2xl text-body-grey font-medium max-w-2xl mb-4">
+                    Responda al instante, cierre más. Sin duplicar su nómina.
+                </p>
+                <div class="flex flex-col items-center max-w-2xl text-center mb-10">
 
                     <ul
                         class="flex flex-col gap-3 mt-4 mb-6 w-fit text-left text-base md:text-lg text-[#0A0A0A] dark:text-white font-medium">
@@ -175,71 +213,268 @@
                         <li class="flex items-center gap-3"><span
                                 class="material-symbols-outlined text-[#0A0A0A] dark:text-white text-xl"
                                 data-icon="check">check</span>Transfiere prospectos listos para comprar.</li>
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-[#0A0A0A] dark:text-white text-xl"
+                                data-icon="check">check</span>Absorbe el volumen sin contratar más personal.</li>
                     </ul>
-                    <p class="text-lg md:text-xl text-[#0A0A0A] dark:text-white font-medium leading-relaxed">
-                        Libere a su equipo comercial para que solo se enfoque en cerrar.
-                    </p>
 
                 </div>
                 <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                    <a href="https://wa.me/573004040285?text=Hola%2C%20necesito%20una%20soluci%C3%B3n%20de%20Inteligencia%20Artificial%20para%20mi%20negocio"
+                    <a href="https://wa.me/573004040285?text=Hola%2C%20quiero%20saber%20cu%C3%A1nto%20estoy%20perdiendo%20en%20WhatsApp"
                         target="_blank" rel="noopener noreferrer"
                         class="inline-block text-center bg-primary text-on-primary-fixed rounded-full px-8 py-4 font-bold text-sm tracking-widest uppercase hover:opacity-90 transition-all duration-300 w-full sm:w-auto">
                         Calcular mi Fuga de Leads
                     </a>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- The Friction (High Contrast Dark Block) -->
-        <section class="relative py-32 px-6 bg-[#0A0A0A] border-y border-white/5 overflow-hidden text-center">
-            <!-- AI Core Glow -->
-            <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-cyan rounded-full blur-[160px] opacity-[0.02] pointer-events-none z-0">
-            </div>
-
-            <div class="relative z-10 max-w-4xl mx-auto">
-                <h2 class="text-4xl md:text-5xl font-extrabold tracking-[-0.04em] mb-8 leading-tight text-white">
-                    El costo oculto de un WhatsApp lento.
-                </h2>
-                <p class="text-xl text-[#E5E5EA] leading-relaxed mb-12">
-                    En los negocios digitales, si usted no responde de inmediato, el prospecto se enfría y busca otra
-                    opción.
-                    <span class="text-accent-cyan">VISION soluciona el primer contacto:</span> nuestro agente responde
-                    24/7 de manera instantánea,
-                    calienta al prospecto y recopila su información estratégica. Cuando su asesor humano interviene, no
-                    empieza de cero; recibe un lead listo para comprar.
-                </p>
-                <div class="flex justify-center">
-                    <a href="https://wa.me/573004040285?text=Hola%2C%20necesito%20una%20soluci%C3%B3n%20de%20Inteligencia%20Artificial%20para%20mi%20negocio"
-                        target="_blank" rel="noopener noreferrer"
-                        class="inline-block text-center bg-white text-black rounded-full px-10 py-5 font-bold text-sm tracking-widest uppercase hover:bg-zinc-200 transition-all duration-300">
-                        Calcular mi Fuga de Leads
+                    <a href="#data"
+                        class="inline-block text-center border-2 border-primary text-primary rounded-full px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-primary hover:text-white transition-all duration-300 w-full sm:w-auto">
+                        Ver los datos ↓
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Features - Cinematic Sticky Scroll -->
-        <section id="mechanism" class="py-24 px-6 md:px-12 xl:px-24">
+        <!-- ==================== TWO PROBLEMS: Speed + Cost ==================== -->
+        <section class="relative py-32 px-6 bg-[#0A0A0A] border-y border-white/5 overflow-hidden">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-cyan rounded-full blur-[160px] opacity-[0.02] pointer-events-none z-0">
+            </div>
+
+            <div class="relative z-10 max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-[-0.04em] mb-8 leading-tight text-white text-center">
+                    Dos problemas. Una solución.
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+                    <!-- Problem 1: Speed -->
+                    <div class="bg-white/5 rounded-2xl p-8 md:p-12 border border-white/10">
+                        <span class="material-symbols-outlined text-accent-cyan text-4xl mb-4">timer_off</span>
+                        <h3 class="text-2xl font-bold text-white mb-4">Ventas que se enfrían</h3>
+                        <p class="text-zinc-400 text-lg leading-relaxed mb-6">
+                            El 69% de los consumidores dice que esperar en línea es una pérdida de tiempo. Y cuando el lead espera, busca en otro lado.
+                        </p>
+                        <div class="bg-white/5 rounded-xl p-5">
+                            <p class="text-accent-cyan text-sm font-bold uppercase tracking-wider mb-2">Datos WhatsApp 2026</p>
+                            <p class="text-zinc-300 text-base"><span class="text-red-400 font-bold">69%</span> esperar en línea = frustración</p>
+                            <p class="text-zinc-300 text-base mt-1"><span class="text-red-400 font-bold">71%</span> prefiere mensajes antes que llamar</p>
+                            <p class="text-zinc-300 text-base mt-1"><span class="text-red-400 font-bold">73.3%</span> prefiere mensajes como canal principal</p>
+                        </div>
+                    </div>
+
+                    <!-- Problem 2: Cost -->
+                    <div class="bg-white/5 rounded-2xl p-8 md:p-12 border border-white/10">
+                        <span class="material-symbols-outlined text-accent-cyan text-4xl mb-4">payments</span>
+                        <h3 class="text-2xl font-bold text-white mb-4">Nómina que no escala</h3>
+                        <p class="text-zinc-400 text-lg leading-relaxed mb-6">
+                            El 72.4% de los consumidores compra más si la empresa ofrece mensajes. Pero atender ese volumen sin IA requiere duplicar personal.
+                        </p>
+                        <div class="bg-white/5 rounded-xl p-5">
+                            <p class="text-accent-cyan text-sm font-bold uppercase tracking-wider mb-2">Datos WhatsApp 2026</p>
+                            <p class="text-zinc-300 text-base"><span class="text-red-400 font-bold">72.4%</span> más probabilidad de comprar si hay mensajes</p>
+                            <p class="text-zinc-300 text-base mt-1"><span class="text-red-400 font-bold">64%</span> prefiere comprar por mensajes que ir a tienda</p>
+                            <p class="text-zinc-300 text-base mt-1"><span class="text-red-400 font-bold">91.8%</span> disfruta recibir actualizaciones por mensajes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-xl text-[#E5E5EA] leading-relaxed max-w-3xl mx-auto mb-10">
+                        <span class="text-accent-cyan font-bold">VISION resuelve los dos:</span> respuesta inmediata 24/7 que
+                        calienta leads y los pasa listos al humano. Su equipo vende más, sin contratar más.
+                    </p>
+                    <a href="#data"
+                        class="inline-block text-center bg-white text-black rounded-full px-10 py-4 font-bold text-sm tracking-widest uppercase hover:bg-zinc-100 transition-all duration-300">
+                        Ver los datos del informe →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== DATOS DEL INFORME WHATSAPP ==================== -->
+        <section id="data" class="py-24 px-6 md:px-12 xl:px-24">
+            <div class="max-w-[1280px] mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-[#0A0A0A] text-center mb-4">
+                    Lo que dice WhatsApp sobre sus clientes
+                </h2>
+                <p class="text-lg text-body-grey text-center max-w-2xl mx-auto mb-4 leading-relaxed">
+                    Datos del informe oficial de Meta <strong>"El estado de los mensajes comerciales 2026"</strong> — 11.056 consumidores encuestados en 22 mercados, incluyendo Colombia.
+                </p>
+                <p class="text-sm text-body-grey text-center mb-16 italic">
+                    Fuente: Kantar para Meta Platforms, Inc. — Adultos online 18-64 años.
+                </p>
+
+                <!-- Big stat cards -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16">
+                    <div class="bg-white rounded-2xl p-6 md:p-8 border border-zinc-200 shadow-sm text-center">
+                        <p class="text-4xl md:text-5xl font-black text-accent-cyan">73.3%</p>
+                        <p class="text-sm text-body-grey mt-2 leading-tight">Prefieren mensajes como canal principal de comunicación</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 md:p-8 border border-zinc-200 shadow-sm text-center">
+                        <p class="text-4xl md:text-5xl font-black text-accent-cyan">69%</p>
+                        <p class="text-sm text-body-grey mt-2 leading-tight">Cree que esperar en línea es una pérdida de tiempo</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 md:p-8 border border-zinc-200 shadow-sm text-center">
+                        <p class="text-4xl md:text-5xl font-black text-accent-cyan">72.4%</p>
+                        <p class="text-sm text-body-grey mt-2 leading-tight">Más probabilidad de comprar si la empresa ofrece mensajes</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 md:p-8 border border-zinc-200 shadow-sm text-center">
+                        <p class="text-4xl md:text-5xl font-black text-accent-cyan">79.8%</p>
+                        <p class="text-sm text-body-grey mt-2 leading-tight">Considera los mensajes un medio rápido y sencillo</p>
+                    </div>
+                </div>
+
+                <!-- Second row -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-2xl p-8 border border-zinc-200 shadow-sm">
+                        <p class="text-lg font-bold mb-4">IA y automatización: lo que esperan los consumidores</p>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span>Respuesta de chatbot con IA 24h mejora la experiencia</span>
+                                    <span class="font-bold">42.9%</span>
+                                </div>
+                                <div class="h-2.5 bg-accent-cyan/10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-accent-cyan rounded-full" style="width: 42.9%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span>Considera útil un chatbot con IA</span>
+                                    <span class="font-bold">67.7%</span>
+                                </div>
+                                <div class="h-2.5 bg-accent-cyan/10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-accent-cyan rounded-full" style="width: 67.7%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span>Los chatbots con IA serán útiles en el futuro</span>
+                                    <span class="font-bold">67.4%</span>
+                                </div>
+                                <div class="h-2.5 bg-accent-cyan/10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-accent-cyan rounded-full" style="width: 67.4%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl p-8 border border-zinc-200 shadow-sm">
+                        <p class="text-lg font-bold mb-4">Confianza y conexión: lo que mueve la decisión</p>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span>Confían más si pueden enviar mensajes</span>
+                                    <span class="font-bold">74.6%</span>
+                                </div>
+                                <div class="h-2.5 bg-emerald-100 rounded-full overflow-hidden">
+                                    <div class="h-full bg-emerald-500 rounded-full" style="width: 74.6%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span>Se sienten más conectados si pueden enviar mensajes</span>
+                                    <span class="font-bold">77.3%</span>
+                                </div>
+                                <div class="h-2.5 bg-emerald-100 rounded-full overflow-hidden">
+                                    <div class="h-full bg-emerald-500 rounded-full" style="width: 77.3%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span>Quieren comunicarse como con amigos</span>
+                                    <span class="font-bold">75.1%</span>
+                                </div>
+                                <div class="h-2.5 bg-emerald-100 rounded-full overflow-hidden">
+                                    <div class="h-full bg-emerald-500 rounded-full" style="width: 75.1%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA WhatsApp Report - after confianza data -->
+                <div id="reporte" class="mt-16 bg-white rounded-2xl border-2 border-[#25D366]/20 shadow-sm overflow-hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="p-8 md:p-12">
+                            <span class="text-xs uppercase tracking-widest text-[#25D366] font-bold mb-3 block">📄 Material Exclusivo</span>
+                            <h3 class="text-2xl md:text-3xl font-bold tracking-tight mb-3">
+                                Descargue el informe completo de WhatsApp 2026
+                            </h3>
+                            <p class="text-body-grey text-sm leading-relaxed mb-4">
+                                <strong>47 páginas</strong> con datos exclusivos de Meta: 11.056 consumidores en 22 mercados, tendencias, casos de éxito (Mercedes-AMG F1, Frávega, Bank BRI, Dermalogica, Chedraui).
+                            </p>
+                            <ul class="space-y-2 text-sm text-body-grey">
+                                <li class="flex items-start gap-2">• 6 pilares estratégicos: velocidad, ingresos, confianza, IA, personalización, recorrido del cliente</li>
+                                <li class="flex items-start gap-2">• Datos de Colombia incluidos</li>
+                                <li class="flex items-start gap-2">• 100% gratis, sin spam</li>
+                            </ul>
+                        </div>
+                        <div class="p-8 md:p-12 bg-[#25D366]/5 flex flex-col justify-center border-t md:border-t-0 md:border-l border-[#25D366]/10">
+                            <h4 class="text-lg font-bold mb-4">Recíbalo en su email</h4>
+
+                            <!-- Mautic form -->
+                            <div id="mauticform_wrapper_visionreporte" class="mauticform_wrapper">
+                                <form autocomplete="false"
+                                    role="form"
+                                    method="post"
+                                    action="https://mautic-vision.automation.coolify.riosdevops.com/form/submit?formId=1"
+                                    id="mauticform_visionreporte"
+                                    enctype="multipart/form-data"
+                                    target="mauticform_visionreporte_hidden"
+                                    onsubmit="return window.MauticFormSubmit(this);">
+                                    <div class="mauticform-error" id="mauticform_visionreporte_error"></div>
+                                    <div class="mauticform-message" id="mauticform_visionreporte_message"></div>
+
+                                    <div class="space-y-3">
+                                        <div class="mauticform-row">
+                                            <input id="mauticform_input_visionreporte_nombre" name="mauticform[nombre]"
+                                                value="" placeholder="Nombre"
+                                                class="w-full px-4 py-3 rounded-xl border border-zinc-200 bg-white text-zinc-900 placeholder-zinc-400 focus:border-[#25D366] focus:outline-none transition-colors text-sm" />
+                                        </div>
+                                        <div class="mauticform-row">
+                                            <input id="mauticform_input_visionreporte_email" name="mauticform[email]"
+                                                value="" required
+                                                placeholder="Email empresarial"
+                                                class="w-full px-4 py-3 rounded-xl border border-zinc-200 bg-white text-zinc-900 placeholder-zinc-400 focus:border-[#25D366] focus:outline-none transition-colors text-sm" />
+                                        </div>
+                                        <div class="mauticform-row mauticform-row-submit">
+                                            <button type="submit" name="mauticform[submit]"
+                                                class="w-full bg-[#25D366] text-white rounded-full px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-[#1da851] transition-all duration-300 shadow-sm">
+                                                Descargar Informe →
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <input type="hidden" name="mauticform[formId]" value="1" />
+                                    <input type="hidden" name="mauticform[return]" value="" />
+                                    <input type="hidden" name="mauticform[formName]" value="visionreporte" />
+                                </form>
+                                <iframe name="mauticform_visionreporte_hidden" style="display:none"></iframe>
+                            </div>
+
+                            <p class="text-zinc-400 text-xs mt-3">Sin compromiso. No compartimos su información.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== FEATURES ==================== -->
+        <section id="mechanism" class="py-24 px-6 md:px-12 xl:px-24 bg-zinc-50">
             <div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 relative">
 
-                <!-- LEFT: Sticky Header with Architectural Divider -->
                 <div class="lg:col-span-5 lg:sticky lg:top-32 h-fit border-r border-[#0A0A0A]/10 pr-8 lg:pr-12">
                     <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-[#0A0A0A]">
-                        La arquitectura de un contacto perfecto.
+                        Cómo funciona.
                     </h2>
-                    <p class="text-lg text-[#86868B] mt-4 leading-relaxed">
-                        Cómo el Agente VISION transforma su WhatsApp en una línea de ensamblaje comercial.
+                    <p class="text-lg text-body-grey mt-4 leading-relaxed">
+                        No es magia. Es un flujo diseñado para que su equipo solo tenga que hacer una cosa: cerrar.
                     </p>
                 </div>
 
-                <!-- RIGHT: Cinematic Scrolling Items -->
                 <div class="lg:col-span-7 flex flex-col">
 
                     <!-- Item 01 -->
-                    <div class="min-h-[60vh] lg:min-h-[80vh] flex flex-col justify-center py-12">
+                    <div class="min-h-[60vh] lg:min-h-[70vh] flex flex-col justify-center py-12">
                         <div class="rounded-2xl overflow-hidden mb-8 aspect-square w-full max-w-lg">
                             <img src="./images/vision-agentes-inteligentes-respuesta-inmedita-v2.jpg"
                                 alt="El Segundo Cero — Respuesta inmediata 24/7 con Agentes VISION"
@@ -247,16 +482,15 @@
                         </div>
                         <h3 class="text-2xl md:text-3xl font-bold text-[#0A0A0A] flex items-center gap-4">
                             <span class="text-[#00E5FF] text-lg font-mono tracking-widest">01 //</span>
-                            El Segundo Cero (Respuesta 24/7)
+                            El Segundo Cero
                         </h3>
-                        <p class="text-lg text-[#86868B] mt-4 max-w-xl leading-relaxed">
-                            Elimine los tiempos de espera. Su negocio responde de manera instantánea y perfecta sin
-                            importar la hora o el día.
+                        <p class="text-lg text-body-grey mt-4 max-w-xl leading-relaxed">
+                            Su lead escribe. En menos de 3 segundos el agente responde con la información correcta. 24/7, 365.
                         </p>
                     </div>
 
                     <!-- Item 02 -->
-                    <div class="min-h-[60vh] lg:min-h-[80vh] flex flex-col justify-center py-12">
+                    <div class="min-h-[60vh] lg:min-h-[70vh] flex flex-col justify-center py-12">
                         <div class="rounded-2xl overflow-hidden mb-8 aspect-square w-full max-w-lg">
                             <img src="./images/vision-agentes-inteligentes-leads.jpg"
                                 alt="Precalificación de Leads y Agendamiento con Agentes VISION"
@@ -264,16 +498,15 @@
                         </div>
                         <h3 class="text-2xl md:text-3xl font-bold text-[#0A0A0A] flex items-center gap-4">
                             <span class="text-[#00E5FF] text-lg font-mono tracking-widest">02 //</span>
-                            Precalificación de Leads y Agendamiento
+                            Precalifica y Agenda
                         </h3>
-                        <p class="text-lg text-[#86868B] mt-4 max-w-xl leading-relaxed">
-                            El agente indaga la necesidad del cliente y captura datos vitales o agenda citas (nombre,
-                            correo, requerimiento) antes de pasarlo a un asesor.
+                        <p class="text-lg text-body-grey mt-4 max-w-xl leading-relaxed">
+                            El agente pregunta, captura datos y agenda citas. Su asesor recibe: nombre, teléfono, producto de interés y hora ideal. Solo vende.
                         </p>
                     </div>
 
                     <!-- Item 03 -->
-                    <div class="min-h-[60vh] lg:min-h-[80vh] flex flex-col justify-center py-12">
+                    <div class="min-h-[60vh] lg:min-h-[70vh] flex flex-col justify-center py-12">
                         <div class="rounded-2xl overflow-hidden mb-8 aspect-square w-full max-w-lg">
                             <img src="./images/vision-agentes-inteligentes-transferencia.jpg"
                                 alt="Handoff Inteligente — Transferencia al equipo humano con Agentes VISION"
@@ -281,16 +514,15 @@
                         </div>
                         <h3 class="text-2xl md:text-3xl font-bold text-[#0A0A0A] flex items-center gap-4">
                             <span class="text-[#00E5FF] text-lg font-mono tracking-widest">03 //</span>
-                            Handoff Inteligente (Paso al Humano)
+                            Pasa al Humano
                         </h3>
-                        <p class="text-lg text-[#86868B] mt-4 max-w-xl leading-relaxed">
-                            Transición perfecta. La IA transfiere la conversación al equipo de ventas con todo el
-                            contexto para un cierre rápido y efectivo.
+                        <p class="text-lg text-body-grey mt-4 max-w-xl leading-relaxed">
+                            Cuando el lead está listo, toda la conversación viaja al asesor humano con contexto completo. No repite nada, no vuelve a cero.
                         </p>
                     </div>
 
                     <!-- Item 04 -->
-                    <div class="min-h-[60vh] lg:min-h-[80vh] flex flex-col justify-center py-12">
+                    <div class="min-h-[60vh] lg:min-h-[70vh] flex flex-col justify-center py-12">
                         <div class="rounded-2xl overflow-hidden mb-8 aspect-square w-full max-w-lg">
                             <img src="./images/vision-agentes-inteligentes-embudos.jpg"
                                 alt="Embudos de Venta Visuales — Agentes VISION"
@@ -298,11 +530,10 @@
                         </div>
                         <h3 class="text-2xl md:text-3xl font-bold text-[#0A0A0A] flex items-center gap-4">
                             <span class="text-[#00E5FF] text-lg font-mono tracking-widest">04 //</span>
-                            Embudos de Venta Visuales
+                            Tablero de Gestión
                         </h3>
-                        <p class="text-lg text-[#86868B] mt-4 max-w-xl leading-relaxed">
-                            Vea el flujo de sus leads desde el primer contacto hasta el cierre en un tablero intuitivo.
-                            Sin pérdidas de historial, sin suposiciones.
+                        <p class="text-lg text-body-grey mt-4 max-w-xl leading-relaxed">
+                            Vea el flujo completo: cuántos leads entraron, cuántos se calificaron, cuántos se cerraron. Sin pérdidas, sin suposiciones.
                         </p>
                     </div>
 
@@ -310,10 +541,84 @@
             </div>
         </section>
 
-        <!-- Guarantee Section -->
+        <!-- ==================== CASOS REALES ==================== -->
+        <section id="casos" class="py-24 px-6 md:px-12 xl:px-24">
+            <div class="max-w-[1280px] mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-[#0A0A0A] text-center mb-4">
+                    Lo que está pasando con VISION
+                </h2>
+                <p class="text-lg text-body-grey text-center max-w-2xl mx-auto mb-16 leading-relaxed">
+                    Resultados de clientes reales. Sin humo.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Caso 1: FAQs -->
+                    <div class="bg-white rounded-2xl p-8 border border-zinc-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-full bg-accent-cyan/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-accent-cyan text-2xl">quiz</span>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-body-grey font-bold">FAQs</p>
+                                <p class="font-bold text-sm">Atención al cliente</p>
+                            </div>
+                        </div>
+                        <p class="text-body-grey text-sm mb-4">Soporte recurrente: preguntas frecuentes, guías y respuestas inmediatas 24/7 sin depender de un agente humano.</p>
+                        <div class="border-t border-zinc-100 pt-4 mt-4">
+                            <p class="text-2xl font-black text-emerald-500">97%</p>
+                            <p class="text-xs text-body-grey">de consultas resueltas sin intervención humana</p>
+                        </div>
+                    </div>
+
+                    <!-- Caso 2: Agendamientos -->
+                    <div class="bg-white rounded-2xl p-8 border border-zinc-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-full bg-accent-cyan/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-accent-cyan text-2xl">calendar_month</span>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-body-grey font-bold">Agendamientos</p>
+                                <p class="font-bold text-sm">Citas y reservas</p>
+                            </div>
+                        </div>
+                        <p class="text-body-grey text-sm mb-4">El cliente agenda solo desde WhatsApp. El agente consulta disponibilidad, confirma y envía recordatorios automáticos.</p>
+                        <div class="border-t border-zinc-100 pt-4 mt-4">
+                            <p class="text-2xl font-black text-emerald-500">40%</p>
+                            <p class="text-xs text-body-grey">menos no-shows con recordatorios automáticos</p>
+                        </div>
+                    </div>
+
+                    <!-- Caso 3: Mix -->
+                    <div class="bg-white rounded-2xl p-8 border border-zinc-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-full bg-accent-cyan/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-accent-cyan text-2xl">conversion_path</span>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-body-grey font-bold">Mix</p>
+                                <p class="font-bold text-sm">Ventas + Soporte interno</p>
+                            </div>
+                        </div>
+                        <p class="text-body-grey text-sm mb-4">Captación de leads con seguimiento automático + agente interno de RRHH que resuelve consultas de empleados por WhatsApp.</p>
+                        <div class="border-t border-zinc-100 pt-4 mt-4">
+                            <p class="text-2xl font-black text-emerald-500">3x</p>
+                            <p class="text-xs text-body-grey">más leads procesados sin aumentar personal</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <p class="text-center text-body-grey text-sm mt-8 italic">
+                    * Datos basados en resultados de clientes actuales de VISION. Nombres omitidos por confidencialidad.
+                </p>
+            </div>
+        </section>
+
+        <!-- ==================== ESTÁNDAR VISION ==================== -->
         <section class="bg-[#0A0A0A] border-y border-white/10 w-full">
             <div class="max-w-[1920px] mx-auto pt-24 px-8 md:px-12 xl:px-24">
-                <h2 class="text-4xl md:text-5xl font-bold tracking-[-0.04em] text-white">El Estándar VISION</h2>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-[-0.04em] text-white">Por qué VISION es diferente</h2>
             </div>
             <div class="max-w-[1920px] mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10 mt-12">
@@ -322,43 +627,43 @@
                                 class="text-accent-cyan font-black mr-1 text-sm">01</span> / EL COMPROMISO</span>
                         <h3 class="text-3xl font-bold tracking-[-0.04em] mb-6 text-white leading-tight">Entrenamiento a
                             la Medida</h3>
-                        <p class="text-zinc-400 leading-relaxed text-lg">No usamos respuestas genéricas. Entrenamos a su
-                            agente con el ADN, el tono y los procesos exactos de su marca.</p>
+                        <p class="text-zinc-400 leading-relaxed text-lg">No usamos respuestas genéricas. El agente se entrena con el ADN, el tono, los productos y los procesos exactos de su marca. Como un empleado más desde el día 1.</p>
                     </div>
                     <div class="flex flex-col px-8 py-20 md:px-12 md:py-32 xl:px-24">
                         <span class="text-xs uppercase tracking-widest text-zinc-400 mb-6 font-bold"><span
                                 class="text-accent-cyan font-black mr-1 text-sm">02</span> / LA INFRAESTRUCTURA</span>
-                        <h3 class="text-3xl font-bold tracking-[-0.04em] mb-6 text-white leading-tight">Infraestructura
-                            Confiable</h3>
-                        <p class="text-zinc-400 leading-relaxed text-lg">Un sistema robusto y centralizado que no se
-                            cae, respaldado por un equipo de ingeniería de alto nivel.</p>
+                        <h3 class="text-3xl font-bold tracking-[-0.04em] mb-6 text-white leading-tight">Ingeniería Propia</h3>
+                        <p class="text-zinc-400 leading-relaxed text-lg">Servidores dedicados, monitoreo 24/7 y equipo de ingeniería interno. No revendemos APIs de terceros empaquetadas — construimos cada agente desde cero.</p>
                     </div>
                     <div class="flex flex-col px-8 py-20 md:px-12 md:py-32 xl:px-24">
                         <span class="text-xs uppercase tracking-widest text-zinc-400 mb-6 font-bold"><span
                                 class="text-accent-cyan font-black mr-1 text-sm">03</span> / EL ACUERDO</span>
-                        <h3 class="text-3xl font-bold tracking-[-0.04em] mb-6 text-white leading-tight">Implementación
-                            Riesgo Cero</h3>
-                        <p class="text-zinc-400 leading-relaxed text-lg">Modelo 100% Mes Vencido. Si en 30 días el
-                            agente no ha rescatado leads y mejorado sus tiempos, usted no paga el primer mes.</p>
+                        <h3 class="text-3xl font-bold tracking-[-0.04em] mb-6 text-white leading-tight">Riesgo Cero</h3>
+                        <p class="text-zinc-400 leading-relaxed text-lg">100% mes vencido. Si en 30 días el agente no ha rescatado leads y mejorado sus tiempos de respuesta, usted no paga el primer mes. Sin letra chica.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Final CTA -->
+        <!-- ==================== FINAL CTA ==================== -->
         <section class="py-32 px-6 min-h-[614px] flex flex-col justify-center items-center text-center">
             <h2 class="text-4xl md:text-5xl font-bold tracking-[-0.04em] mb-8 max-w-4xl leading-tight">
                 ¿Listo para dejar de perder ventas por demoras en WhatsApp?
             </h2>
             <p class="text-xl text-body-grey max-w-2xl mb-12 font-normal leading-relaxed">
-                Agende una demostración y descubra cómo un primer contacto inmediato puede multiplicar su facturación
-                este trimestre.
+                Agende una demostración y descubra cómo un primer contacto inmediato puede multiplicar su facturación este trimestre. O si prefiere, vea primero un caso sin compromiso.
             </p>
-            <a href="https://wa.me/573004040285?text=Hola%2C%20necesito%20una%20soluci%C3%B3n%20de%20Inteligencia%20Artificial%20para%20mi%20negocio"
-                target="_blank" rel="noopener noreferrer"
-                class="inline-block text-center bg-primary text-on-primary-fixed rounded-full px-12 py-5 font-bold text-sm tracking-widest uppercase hover:opacity-90 transition-all duration-300">
-                Solicitar Demo y Auditoría
-            </a>
+            <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="https://wa.me/573004040285?text=Hola%2C%20quiero%20una%20demo%20de%20VISION%20para%20mi%20negocio"
+                    target="_blank" rel="noopener noreferrer"
+                    class="inline-block text-center bg-primary text-on-primary-fixed rounded-full px-12 py-5 font-bold text-sm tracking-widest uppercase hover:opacity-90 transition-all duration-300 w-full sm:w-auto">
+                    Solicitar Demo y Auditoría
+                </a>
+                <a href="#reporte"
+                    class="inline-block text-center bg-[#25D366] text-white rounded-full px-12 py-5 font-bold text-sm tracking-widest uppercase hover:bg-[#1da851] transition-all duration-300 w-full sm:w-auto shadow-sm">
+                    Descargar Informe WhatsApp
+                </a>
+            </div>
         </section>
     </main>
 
@@ -376,6 +681,7 @@
         </div>
     </footer>
 
+    <script src="https://mautic-vision.automation.coolify.riosdevops.com/form/generate.js?formId=1"></script>
     <script>
         const observerOptions = {
             threshold: 0.1,
