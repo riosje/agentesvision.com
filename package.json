@@ -1,0 +1,11 @@
+{
+  "name": "visionweb",
+  "private": true,
+  "scripts": {
+    "build": "npx tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify",
+    "watch": "npx tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .ghost-border {
+    border: 1px solid rgba(134, 134, 139, 0.2);
+  }
+
+  .hero-grid-bg {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    mask-image: radial-gradient(ellipse at center top, black 10%, transparent 60%);
+    -webkit-mask-image: radial-gradient(ellipse at center top, black 10%, transparent 60%);
+  }
+
+  .dark .hero-grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 8s ease-in-out infinite;
+  }
+}
+
+@layer components {
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.02; transform: scale(1); }
+    50% { opacity: 0.05; transform: scale(1.05); }
+  }
+
+  .reveal-card {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal-card.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mauticform-label { display: none !important; }
+  .mauticform-error { color: #ef4444; font-size: 0.75rem; margin-top: 0.25rem; }
+  .mauticform-message { color: #22c55e; font-size: 0.875rem; margin-top: 0.5rem; }
+  .mauticform-button {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 9999px;
+    padding: 1rem 2.5rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: none;
+    transition: opacity 0.3s;
+    width: 100%;
+  }
+  .mauticform-button:hover { opacity: 0.9; }
+  .mauticform-input {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(134, 134, 139, 0.3);
+    border-radius: 1rem;
+    font-size: 1rem;
+    background: white;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .mauticform-input:focus { border-color: #00E5FF; }
+}
+
+@media (hover: hover) {
+  .group:hover .reveal-card:not(:hover) { opacity: 0.4; }
+}
