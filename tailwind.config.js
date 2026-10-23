@@ -53,7 +53,7 @@ module.exports = {
         "on-secondary-container": "#1a1b1f",
         "on-background": "#1a1c1d",
         "accent-cyan": "#00E5FF",
-        "body-grey": "#86868B",
+        "body-grey": "#3D4A54",
       },
       borderRadius: {
         DEFAULT: "1rem",
