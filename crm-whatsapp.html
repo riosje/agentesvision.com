@@ -643,6 +643,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
               <input id="mauticform_input_informe_wh_nombre" name="mauticform[nombre]" value="" placeholder="Tu nombre" type="text" autocomplete="name"><span class="mauticform-errormsg" style="display:none"></span></div>
             <div class="mauticform-row mauticform-required field" id="mauticform_informe_wh_email" data-validate="email" data-validation-type="email"><label for="mauticform_input_informe_wh_email">Correo</label>
               <input id="mauticform_input_informe_wh_email" name="mauticform[email]" value="" required type="email" placeholder="Tu correo del trabajo" autocomplete="email"><span class="mauticform-errormsg" style="display:none">Revisa tu correo.</span></div>
+            <!-- Trampa anti-robots (campo captcha de Mautic sin respuesta = honeypot): una persona no lo ve; si llega lleno, Mautic descarta el envío -->
+            <div class="mauticform-row" id="mauticform_informe_wh_sitio_web" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
+              <label for="mauticform_input_informe_wh_sitio_web">Sitio web</label>
+              <input id="mauticform_input_informe_wh_sitio_web" name="mauticform[sitio_web]" value="" type="text" tabindex="-1" autocomplete="off"></div>
             <label class="consent"><input type="checkbox" required><span data-consent>Autorizo a Vision a tratar mis datos para contactarme sobre Vision y enviarme información comercial, según la Ley 1581 de 2012. Puedo consultar, corregir o pedir que borren mis datos escribiendo a gerencia@agentesvision.com.</span></label>
             <div class="mauticform-row mauticform-row-submit" id="mauticform_informe_wh_submit">
               <button type="submit" name="mauticform[submit]" id="mauticform_input_informe_wh_submit" value="" class="btn btn-glass" style="width:100%">Recibir el informe</button></div>
